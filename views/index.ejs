@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expense List</title>
+</head>
+<body>
+  <h1>Expenses</h1>
+  <ul>
+    <% items.forEach(item => { %>
+      <li>
+        <%= item.name %> - <%= item.price %> - <%= item.time %>
+        <a href="/edit/<%= item.id %>">Edit</a>
+        <a href="/delete/<%= item.id %>">Delete</a>
+      </li>
+    <% }) %>
+  </ul>
+  <a href="/add">Add Expense</a>
+</body>
+</html>
